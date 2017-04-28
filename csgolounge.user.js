@@ -6,8 +6,8 @@
 // @author       ssovit
 // @match        https://csgolounge.com/mytrades
 // @grant        none
-// @updateURL    https://github.com/ssovit/userscripts/raw/master/csgolounge.js
-// @downloadURL  https://github.com/ssovit/userscripts/raw/master/csgolounge.js
+// @updateURL    https://github.com/ssovit/userscripts/raw/master/csgolounge.user.js
+// @downloadURL  https://github.com/ssovit/userscripts/raw/master/csgolounge.user.js
 // @require      https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js
 // @run-at document-end
 // ==/UserScript==
