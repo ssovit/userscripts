@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Simplo GG auto follow steps
 // @namespace    https://github.com/ssovit/userscripts
-// @version      1.0.0
+// @version      1.0.1
 // @description  Auto Bump for CSGoLounge.com
 // @author       ssovit
 // @match        https://simplo.gg/index.php?giveaway=*
@@ -13,7 +13,7 @@
 // ==/UserScript==
 (function () {
     'use strict';
-    var MyInterval = 5; // in seconds
+    var MyInterval = 2; // in seconds
     var i = 0;
     $('.mod-enter .enter-sec').each(function () {
         var _parent = $(this).parent();
