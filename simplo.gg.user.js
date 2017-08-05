@@ -27,8 +27,6 @@
                 $('.takeaction', _parent).click();
             }, i * MyInterval * 1000);
             i++;
-
-
         });
     }
 })(window);
