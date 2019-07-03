@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Auto Filller - Arpit Photo Studio
 // @namespace    http://ssovit.com
-// @version      0.3
+// @version      0.4
 // @description  Forms Fill Helper for Arpit Photo Studio
 // @author       You
 // @match        http://tsc.gov.np/dform
@@ -216,7 +216,7 @@
 			});
 		var _label = $("<div></div>")
 			.css({
-				width: '20%',
+				width: '30%',
 				fontSize: 16,
 				paddingTop:6,
 				lineHeight: '30px',
@@ -235,7 +235,7 @@
 		_label.append("<div>गाँउ / टोल</div>");
 		var _textarea = $("<textarea></textarea>")
 			.css({
-				width: "80%",
+				width: "70%",
 				height: "400",
 				fontFamily: "Preeti",
 				fontSize: 24,
