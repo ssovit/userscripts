@@ -1,10 +1,11 @@
 // ==UserScript==
 // @name         Auto Filller - Arpit Photo Studio
 // @namespace    http://ssovit.com
-// @version      0.5
+// @version      0.8
 // @description  Forms Fill Helper for Arpit Photo Studio
 // @author       You
 // @match        http://tsc.gov.np/dform
+// @match        http://tsc.gov.np/userlogin
 // @updateURL    https://github.com/ssovit/userscripts/raw/master/autofiller.user.js
 // @downloadURL  https://github.com/ssovit/userscripts/raw/master/autofiller.user.js
 // @grant        none
@@ -12,6 +13,7 @@
 // ==/UserScript==
 (function() {
 	'use strict';
+	/* Entry Form Start */
 	if ($('#frmdform')
 		.length > 0) {
 		var myFont = {
@@ -268,5 +270,35 @@
 				});
 		});
 	}
+	/* Entry Form End */
+	/* Voucher Form Start */
+	if ($("#frmvoucher")
+		.length > 0) {
+		$("#voucheruserid")
+			.on('keyup', function() {
+				var _val = $(this)
+					.val();
+				if (_val.indexOf("=") > -1) {
+					var _parts = _val.split("=");
+					$("#voucheruserid")
+						.val(_parts[0]);
+					$("#voucherpassword")
+						.val(_parts[1]);
+				}
+			});
+		$("#applicationid")
+			.on('keyup', function() {
+				$('#applicationid1')
+					.val($(this)
+						.val());
+			});
+		$("#voucherid")
+			.on('keyup', function() {
+				$('#voucherid1')
+					.val($(this)
+						.val());
+			});
+	}
+	/* Voucher Form End */
 	// Coding is AWESOME!!
 })();
