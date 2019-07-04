@@ -275,7 +275,7 @@
 	if ($("#frmvoucher")
 		.length > 0) {
 		$("#voucheruserid")
-			.on('keyup', function() {
+			.on('change', function() {
 				var _val = $(this)
 					.val();
 				if (_val.indexOf("=") > -1) {
@@ -286,6 +286,8 @@
 						.val(_parts[1]);
 				}
 			});
+			$("#applicationid,#applicationid1").val("TSC00");
+			$("#voucherid,#voucherid1").val("2075-");
 		$("#applicationid")
 			.on('keyup', function() {
 				$('#applicationid1')
