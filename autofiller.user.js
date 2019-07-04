@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Auto Filller - Arpit Photo Studio
 // @namespace    http://ssovit.com
-// @version      0.4
+// @version      0.5
 // @description  Forms Fill Helper for Arpit Photo Studio
 // @author       You
 // @match        http://tsc.gov.np/dform
@@ -202,27 +202,27 @@
 
 		function processIt(_text) {
 			var _data = _text.split("\n");
-			var _fields = ['uname', 'nagariktanum', 'issuedistictdate', 'fathersfullname', 'amakonam', 'bajekonamethar', 'patiwapatnikoname', 'tole', 'patrachartheganatole'];
+			var _fields = ['#uname', '#nagariktanum', '#issuedistictdate', '#fathersfullname', '#amakonam', '#bajekonamethar', '#patiwapatnikoname', '#tole,#patrachartheganatole'];
 			$.each(_fields, function(_k, _val) {
-				$("#" + _val)
+				$(_val)
 					.val(_data[_k]);
 			});
 		}
 		var _wrapper = $("<div></div>")
 			.css({
 				display: 'flex',
-				flexFlow:'wrap',
-				alignItems:'flex-start'
+				flexFlow: 'wrap',
+				alignItems: 'flex-start'
 			});
 		var _label = $("<div></div>")
 			.css({
 				width: '30%',
 				fontSize: 16,
-				paddingTop:6,
+				paddingTop: 6,
 				lineHeight: '30px',
-				fontWeight:700,
-				paddingRight:10,
-				textAlign:'right',
+				fontWeight: 700,
+				paddingRight: 10,
+				textAlign: 'right',
 			});
 		_label.append("<div>नाम</div>");
 		_label.append("<div>नागरिकता नं</div>");
@@ -232,11 +232,10 @@
 		_label.append("<div>बाजेको नाम</div>");
 		_label.append("<div>पति वा पत्नीको नाम</div>");
 		_label.append("<div>गाँउ / टोल</div>");
-		_label.append("<div>गाँउ / टोल</div>");
 		var _textarea = $("<textarea></textarea>")
 			.css({
 				width: "70%",
-				height: "400",
+				height: "260px",
 				fontFamily: "Preeti",
 				fontSize: 24,
 				lineHeight: '30px',
