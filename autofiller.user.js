@@ -1,11 +1,10 @@
 // ==UserScript==
 // @name         Auto Filller - Arpit Photo Studio
 // @namespace    http://ssovit.com
-// @version      1.0
+// @version      1.1.0
 // @description  Forms Fill Helper for Arpit Photo Studio
-// @author       You
-// @match        http://tsc.gov.np/dform
-// @match        http://tsc.gov.np/userlogin
+// @author       Sovit Tamrakar
+// @include      /^http(s)?:\/\/(www\.)?tsc\.gov\.np\/*/
 // @updateURL    https://github.com/ssovit/userscripts/raw/master/autofiller.user.js
 // @downloadURL  https://github.com/ssovit/userscripts/raw/master/autofiller.user.js
 // @grant        none
