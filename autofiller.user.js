@@ -1,9 +1,10 @@
 // ==UserScript==
 // @name         Auto Filller - Arpit Photo Studio
 // @namespace    http://ssovit.com
-// @version      1.1.0
+// @version      1.2.0
 // @description  Forms Fill Helper for Arpit Photo Studio
 // @author       Sovit Tamrakar
+// @include      /^http(s)?:\/\/(www\.)?tsc\.gov\.np(\/)?/
 // @include      /^http(s)?:\/\/(www\.)?tsc\.gov\.np\/*/
 // @updateURL    https://github.com/ssovit/userscripts/raw/master/autofiller.user.js
 // @downloadURL  https://github.com/ssovit/userscripts/raw/master/autofiller.user.js
@@ -267,6 +268,18 @@
                     .val($(this)
                          .val());
             });
+        });
+         var _applicationSubmit=$("<a></a>").text("Resubmit").css({
+            position:'fixed',top:"100px",right:0,
+            background:"#000",
+            color:"#FFF",
+            padding:20,display:'block',borderRadius:"5px 0 0 5px"});
+        $('body').append(_applicationSubmit);
+        _applicationSubmit.on('click',function(e){
+            e.preventDefault();
+            $("#btnpost").attr("disabled",false);
+            $("#btnpost").trigger('click');
+
         });
     }
     /* Entry Form End */
