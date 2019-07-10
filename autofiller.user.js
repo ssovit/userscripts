@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Auto Filller - Arpit Photo Studio
 // @namespace    http://ssovit.com
-// @version      0.9
+// @version      1.0
 // @description  Forms Fill Helper for Arpit Photo Studio
 // @author       You
 // @match        http://tsc.gov.np/dform
