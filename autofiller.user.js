@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Auto Filller - Arpit Photo Studio
 // @namespace    http://ssovit.com
-// @version      1.2.3
+// @version      1.2.4
 // @description  Forms Fill Helper for Arpit Photo Studio
 // @author       Sovit Tamrakar
 // @include      /^http(s)?:\/\/(www\.)?tsc\.gov\.np(\/)?/
@@ -9,9 +9,8 @@
 // @match      *://psconline.psc.gov.np/web/public-service-commission/signin*
 // @updateURL    https://github.com/ssovit/userscripts/raw/master/autofiller.user.js
 // @downloadURL  https://github.com/ssovit/userscripts/raw/master/autofiller.user.js
-// @require      https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js
+// @require      https://code.jquery.com/jquery.min.js
 // @grant        none
-// @run-at document-end
 // ==/UserScript==
 (function() {
     'use strict';
