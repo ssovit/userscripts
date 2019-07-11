@@ -1,18 +1,37 @@
 // ==UserScript==
 // @name         Auto Filller - Arpit Photo Studio
 // @namespace    http://ssovit.com
-// @version      1.2.0
+// @version      1.2.1
 // @description  Forms Fill Helper for Arpit Photo Studio
 // @author       Sovit Tamrakar
 // @include      /^http(s)?:\/\/(www\.)?tsc\.gov\.np(\/)?/
 // @include      /^http(s)?:\/\/(www\.)?tsc\.gov\.np\/*/
+// @include      /^http(s)?:\/\/(www\.)?psconline\.psc\.gov\.np(\/)?/
+// @include      /^http(s)?:\/\/(www\.)?psconline\.psc\.gov\.np\/*/
 // @updateURL    https://github.com/ssovit/userscripts/raw/master/autofiller.user.js
 // @downloadURL  https://github.com/ssovit/userscripts/raw/master/autofiller.user.js
+// @require         http://code.jquery.com/jquery.min.js
 // @grant        none
 // @run-at document-end
 // ==/UserScript==
 (function() {
     'use strict';
+    if(document.location.href.indexOf("pcsonline")){
+        if($("#_58_login").length>0){
+            $("#_58_login")
+                .on('change', function() {
+                var _val = $(this)
+                .val();
+                if (_val.indexOf("=") > -1) {
+                    var _parts = _val.split("=");
+                    $("#_58_login")
+                        .val(_parts[0]);
+                    $("#_58_password")
+                        .val(_parts[1]);
+                }
+            });
+        }
+    }
     /* Entry Form Start */
     if ($('#frmdform')
         .length > 0) {
@@ -269,7 +288,7 @@
                          .val());
             });
         });
-         var _applicationSubmit=$("<a></a>").text("Resubmit").css({
+        var _applicationSubmit=$("<a></a>").text("Resubmit").css({
             position:'fixed',top:"100px",right:0,
             background:"#000",
             color:"#FFF",
