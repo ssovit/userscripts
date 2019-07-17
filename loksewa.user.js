@@ -1,11 +1,11 @@
 // ==UserScript==
 // @name         Helper: Lok Sewa
 // @namespace    http://ssovit.com
-// @version      1.0.1
+// @version      1.0.2
 // @description  Forms Fill Helper for Arpit Photo Studio
 // @author       Sovit Tamrakar
 // @match        *://psconline.psc.gov.np/web/public-service-commission/signin*
-// @match        *://psconline.psc.gov.np/web/web/sign-in*
+// @match        *://psconline.psc.gov.np/web/guest/sign-in*
 // @updateURL    https://github.com/ssovit/userscripts/raw/master/loksewa.user.js
 // @downloadURL  https://github.com/ssovit/userscripts/raw/master/loksewa.user.js
 // @grant        none
